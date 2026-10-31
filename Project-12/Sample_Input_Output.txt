@@ -1,0 +1,397 @@
+# OOP PRACTICAL 12 — SAMPLE INPUT AND OUTPUT
+
+**Project:** Library Management System
+**Student:** Ramesh Kumar
+**URN:** E25B001202
+```text
+Library Management System
+Book records loaded from books.csv (if the file exists).
+
+===== LIBRARY MANAGEMENT SYSTEM =====
+RAMESH KUMAR
+ E25B0011202
+1. Add book
+2. Search book
+3. List all books
+4. Issue book
+5. Return book
+0. Save and exit
+Enter your choice:
+```
+
+============================================================
+TEST 1 — INVALID BOOK ID (NON-NUMERIC INPUT)
+============================================
+
+Input:
+1
+B12026
+
+Output:
+Enter your choice: 1
+Enter book ID: B12026
+Error: Invalid input. Please enter a whole number.
+
+============================================================
+TEST 2 — INVALID BOOK ID (ALPHANUMERIC INPUT)
+=============================================
+
+Input:
+1
+B1
+
+Output:
+Enter your choice: 1
+Enter book ID: B1
+Error: Invalid input. Please enter a whole number.
+
+============================================================
+TEST 3 — INVALID MENU CHOICE
+============================
+
+Input:
+20261
+
+Output:
+Enter your choice: 20261
+Error: Invalid menu choice. Select a number from 0 to 5.
+
+============================================================
+TEST 4 — ADD BOOK (VALID INPUT)
+===============================
+
+Input:
+1
+126
+C++ Programming
+Bjarne Stroustrup
+
+Output:
+Enter your choice: 1
+Enter book ID: 126
+Enter book title (no commas): C++ Programming
+Enter author name (no commas): Bjarne Stroustrup
+Book added and saved successfully.
+
+============================================================
+TEST 5 — ADD ANOTHER BOOK
+=========================
+
+Input:
+1
+226
+musafir caffe
+Divya Prakash Dube
+
+Output:
+Enter your choice: 1
+Enter book ID: 226
+Enter book title (no commas): musafir caffe
+Enter author name (no commas): Divya Prakash Dube
+Book added and saved successfully.
+
+============================================================
+TEST 6 — ADD THIRD BOOK
+=======================
+
+Input:
+1
+326
+October Junction
+Divya Prakash Dube
+
+Output:
+Enter your choice: 1
+Enter book ID: 326
+Enter book title (no commas): October Junction
+Enter author name (no commas): Divya Prakash Dube
+Book added and saved successfully.
+
+============================================================
+TEST 7 — SEARCH BOOK
+====================
+
+Input:
+2
+226
+
+Output:
+Enter your choice: 2
+Enter book ID to search: 226
+Book ID: 226
+Title: musafir caffe
+Author: Divya Prakash Dube
+Status: Available
+
+============================================================
+TEST 8 — SEARCH ANOTHER BOOK
+============================
+
+Input:
+2
+126
+
+Output:
+Enter your choice: 2
+Enter book ID to search: 126
+Book ID: 126
+Title: C++ Programming
+Author: Bjarne Stroustrup
+Status: Available
+
+============================================================
+TEST 9 — LIST ALL BOOKS
+=======================
+
+Input:
+3
+
+Output:
+--- Book List ---
+
+Book ID: 101
+Title: The Alchemist
+Author: Paulo Coelho
+Status: Available
+
+Book ID: 102
+Title: Atomic Habits
+Author: James Clear
+Status: Issued
+
+Book ID: 126
+Title: C++ Programming
+Author: Bjarne Stroustrup
+Status: Available
+
+Book ID: 226
+Title: musafir caffe
+Author: Divya Prakash Dube
+Status: Available
+
+Book ID: 326
+Title: October Junction
+Author: Divya Prakash Dube
+Status: Available
+
+============================================================
+TEST 10 — ISSUE A BOOK
+======================
+
+Input:
+4
+226
+
+Output:
+Enter your choice: 4
+Enter book ID to issue: 226
+Book issued successfully.
+
+============================================================
+TEST 11 — VERIFY ISSUED BOOK
+============================
+
+Input:
+3
+
+Output:
+Book ID: 226
+Title: musafir caffe
+Author: Divya Prakash Dube
+Status: Issued
+
+============================================================
+TEST 12 — RETURN A BOOK
+=======================
+
+Input:
+5
+226
+
+Output:
+Enter your choice: 5
+Enter book ID to return: 226
+Book returned successfully.
+
+============================================================
+TEST 13 — ISSUE ANOTHER BOOK
+============================
+
+Input:
+4
+326
+
+Output:
+Enter your choice: 4
+Enter book ID to issue: 326
+Book issued successfully.
+
+============================================================
+TEST 14 — ISSUE ALREADY ISSUED BOOK
+===================================
+
+Input:
+4
+326
+
+Output:
+Enter your choice: 4
+Enter book ID to issue: 326
+Error: This book is already issued.
+
+============================================================
+TEST 15 — INVALID MENU CHOICE
+=============================
+
+Input:
+426
+
+Output:
+Enter your choice: 426
+Error: Invalid menu choice. Select a number from 0 to 5.
+
+============================================================
+TEST 16 — RETURN ISSUED BOOK
+============================
+
+Input:
+5
+326
+
+Output:
+Enter your choice: 5
+Enter book ID to return: 326
+Book returned successfully.
+
+============================================================
+TEST 17 — RETURN ALREADY AVAILABLE BOOK
+=======================================
+
+Input:
+5
+126
+
+Output:
+Enter your choice: 5
+Enter book ID to return: 126
+Error: This book is not currently issued.
+
+============================================================
+TEST 18 — ADD FOURTH BOOK
+=========================
+
+Input:
+1
+426
+Ramcharitmanas
+Goswami Tulsidas
+
+Output:
+Enter your choice: 1
+Enter book ID: 426
+Enter book title (no commas): Ramcharitmanas
+Enter author name (no commas): Goswami Tulsidas
+Book added and saved successfully.
+
+============================================================
+TEST 19 — SEARCH NEWLY ADDED BOOK
+=================================
+
+Input:
+2
+426
+
+Output:
+Enter your choice: 2
+Enter book ID to search: 426
+Book ID: 426
+Title: Ramcharitmanas
+Author: Goswami Tulsidas
+Status: Available
+
+============================================================
+TEST 20 — SEARCH NON-EXISTING BOOK
+==================================
+
+Input:
+2
+526
+
+Output:
+Enter your choice: 2
+Enter book ID to search: 526
+Error: No book found with ID 526.
+
+============================================================
+TEST 21 — FINAL BOOK LIST
+=========================
+
+Input:
+3
+
+Output:
+--- Book List ---
+
+Book ID: 101
+Title: The Alchemist
+Author: Paulo Coelho
+Status: Available
+
+Book ID: 102
+Title: Atomic Habits
+Author: James Clear
+Status: Issued
+
+Book ID: 126
+Title: C++ Programming
+Author: Bjarne Stroustrup
+Status: Available
+
+Book ID: 226
+Title: musafir caffe
+Author: Divya Prakash Dube
+Status: Available
+
+Book ID: 326
+Title: October Junction
+Author: Divya Prakash Dube
+Status: Available
+
+Book ID: 426
+Title: Ramcharitmanas
+Author: Goswami Tulsidas
+Status: Available
+
+============================================================
+TEST 22 — SAVE AND EXIT
+=======================
+
+Input:
+0
+
+Output:
+Enter your choice: 0
+Exiting Library Management System. Data is saved.
+
+============================================================
+FINAL RESULT
+============
+
+The Library Management System was successfully executed.
+
+The following features were tested:
+
+1. Adding new books.
+2. Searching books using Book ID.
+3. Displaying all book records.
+4. Issuing available books.
+5. Returning issued books.
+6. Preventing duplicate book IDs.
+7. Handling invalid and non-numeric inputs.
+8. Handling unavailable and unknown books.
+9. Saving book records in a CSV file.
+10. Loading previously saved book records.
+
+Custom exception handling successfully handled invalid inputs and library-related errors without terminating the program.
+
+**Result:** The Library Management System successfully demonstrates OOP concepts, STL containers, file handling and exception handling in C++.
