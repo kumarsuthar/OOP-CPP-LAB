@@ -512,11 +512,167 @@ Alternatively, use the C/C++ extension in Visual Studio Code.
 
 ---
 
-## 🎓 Conclusion
+---
 
-These eleven practicals cover the fundamentals of C++ programming and introduce important concepts used in software development. They provide experience with object-oriented programming, resource management, polymorphism, design patterns, templates, exception handling, file operations, and version control.
+# 🔹 Practical 12 — Library Management System Using OOP, STL, Exception Handling and File Handling
 
-The repository serves as a record of the practical exercises and the programming concepts implemented throughout the course.
+## ❓ Problem Statement
+
+Develop a menu-driven Library Management System in C++ that allows users to add, search, display, issue, and return books. The system should use object-oriented programming concepts, STL containers, custom exception handling, input validation, and CSV file handling to manage book records efficiently.
+
+## 🎯 Objective
+
+To develop a practical understanding of object-oriented programming, Standard Template Library (STL), custom exceptions, and file handling by implementing a Library Management System.
+
+## 📖 Theory
+
+The Library Management System demonstrates how different C++ concepts can be combined to develop a real-world application.
+
+### 🧠 Important Concepts
+
+* **Structure (`struct`):** The `Book` structure stores book information, including ID, title, author, and availability status.
+* **Class and Objects:** The `Library` class manages book records and provides functions to perform library operations.
+* **Encapsulation:** Book management operations are organised within the Library class, keeping internal data private.
+* **STL Map:** `map<int, Book>` stores book records using unique book IDs as keys.
+* **STL Vector:** `vector<Book>` stores and returns a collection of book records for displaying the complete book list.
+* **Custom Exception Handling:** User-defined exception classes handle errors such as invalid input, duplicate book IDs, missing books, and unavailable books.
+* **File Handling:** `ifstream` and `ofstream` are used to read and write book records.
+* **CSV File:** The `books.csv` file stores book information permanently so that records can be loaded when the application starts.
+* **Input Validation:** Validates numeric input, book IDs, titles, author names, and menu choices.
+* **Exception Handling:** Uses `try`, `throw`, and `catch` to handle runtime errors safely.
+
+### ⚙️ Main Features
+
+1. **Add Book:** Adds a new book using its ID, title, and author name.
+2. **Search Book:** Searches for a book using its unique ID.
+3. **List All Books:** Displays all available book records with their current status.
+4. **Issue Book:** Changes a book's status from Available to Issued.
+5. **Return Book:** Changes a book's status from Issued to Available.
+6. **Save Records:** Automatically saves book information in the CSV file.
+7. **Input Validation:** Prevents invalid menu choices and incorrect data entry.
+8. **Custom Error Handling:** Displays meaningful error messages for invalid operations.
+
+### ⚠️ Custom Exception Classes
+
+The project implements the following custom exception classes:
+
+* `LibraryException` — Base exception class for library-related errors.
+* `InvalidBookData` — Handles invalid book information.
+* `InvalidInput` — Handles incorrect user input.
+* `DuplicateBookId` — Handles duplicate book IDs.
+* `BookNotFound` — Handles searches or operations involving unknown book IDs.
+* `BookUnavailable` — Handles attempts to issue an already-issued book.
+* `BookAlreadyAvailable` — Handles attempts to return a book that is already available.
+
+### 🧪 Test Cases
+
+The application handles different valid and invalid operations.
+
+| Test Case                    | Expected Behaviour                       |
+| ---------------------------- | ---------------------------------------- |
+| Add a new book               | Book added successfully                  |
+| Add duplicate book ID        | Displays duplicate ID error              |
+| Search existing book         | Displays book information                |
+| Search unknown book ID       | Displays book not found error            |
+| Enter non-numeric book ID    | Displays invalid input error             |
+| Enter invalid menu choice    | Displays invalid menu choice error       |
+| Issue an available book      | Book status changes to Issued            |
+| Issue an already-issued book | Displays book already issued error       |
+| Return an issued book        | Book status changes to Available         |
+| Return an available book     | Displays book not currently issued error |
+| Restart application          | Loads previously saved book records      |
+
+## 🗂️ Project File Structure
+
+```text
+Project-12/
+│
+├── main.cpp
+├── books.csv
+├── README.md
+├── Sample_Input_Output.txt
+├── UML_Class_Diagram.png
+└── OOP_Practical_12_Document_Final.docx
+```
+
+### 📌 UML Class Diagram
+
+The UML Class Diagram represents the relationship between the Book structure, Library class, and custom exception hierarchy.
+
+![UML Class Diagram](UML_Class_Diagram.png)
+
+## ▶️ Compile/Run Instructions
+
+**Step 1:** Open the `Project-12` folder in Visual Studio Code.
+
+**Step 2:** Open the terminal and compile the program:
+
+```bash
+g++ -std=c++17 main.cpp -o LibraryManagementSystem.exe
+```
+
+**Step 3:** Run the executable:
+
+```powershell
+.\LibraryManagementSystem.exe
+```
+
+**Step 4:** Use the menu to perform library operations.
+
+## 📋 Application Menu
+
+```text
+===== LIBRARY MANAGEMENT SYSTEM =====
+
+1. Add book
+2. Search book
+3. List all books
+4. Issue book
+5. Return book
+0. Save and exit
+
+Enter your choice:
+```
+
+## 💾 Data Storage
+
+The application uses `books.csv` to store book records.
+
+The CSV file contains the following fields:
+
+```text
+id,title,author,available
+```
+
+* `id` — Unique book identification number.
+* `title` — Name of the book.
+* `author` — Author of the book.
+* `available` — Book availability status (`1` for Available and `0` for Issued).
+
+Book records are loaded when the application starts and saved whenever book information or availability changes.
+
+## 🎓 Learning Outcomes
+
+After completing this practical, the following concepts were implemented and understood:
+
+* Object-Oriented Programming using classes and structures.
+* Encapsulation and data management.
+* STL containers such as `map` and `vector`.
+* Custom exception classes and exception handling.
+* File handling using CSV files.
+* Input validation and error handling.
+* Menu-driven application development.
+* Persistent storage of application data.
+
+---
+
+## 🎓 Updated Conclusion
+
+These twelve practicals cover the fundamentals of C++ programming and introduce important concepts used in software development. They provide hands-on experience with object-oriented programming, memory management, inheritance, polymorphism, design patterns, templates, exception handling, file operations, STL containers, and practical application development.
+
+The final practical, Library Management System, combines multiple C++ concepts into a single menu-driven application with CSV-based data storage and custom exception handling.
+
+The repository serves as a record of the practical exercises and programming concepts implemented throughout the course.
 
 ---
 
