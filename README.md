@@ -666,7 +666,7 @@ After completing this practical, the following concepts were implemented and und
 
 ---
 
-## 🎓 Updated Conclusion
+## 🎓  Conclusion
 
 These twelve practicals cover the fundamentals of C++ programming and introduce important concepts used in software development. They provide hands-on experience with object-oriented programming, memory management, inheritance, polymorphism, design patterns, templates, exception handling, file operations, STL containers, and practical application development.
 
